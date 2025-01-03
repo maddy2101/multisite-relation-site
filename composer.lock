@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b54093402dca72c322e76185d3e6cb5",
+    "content-hash": "69602e7350bdee46fcbed78bbed3aba5",
     "packages": [
         {
             "name": "ab-softlab/multisite-relation",

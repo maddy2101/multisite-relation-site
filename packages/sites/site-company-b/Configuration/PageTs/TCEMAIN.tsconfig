@@ -1,0 +1,4 @@
+TCEMAIN {
+    permissions.groupid = 3
+    permissions.group = show, editcontent, edit, delete, new
+}

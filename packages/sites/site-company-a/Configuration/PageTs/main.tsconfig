@@ -1,1 +1,2 @@
 @import 'EXT:site-company-a/Configuration/PageTs/Mod/WebLayout/BackendLayouts/*.tsconfig'
+@import 'EXT:site-company-a/Configuration/PageTs/TCEMAIN.tsconfig'
