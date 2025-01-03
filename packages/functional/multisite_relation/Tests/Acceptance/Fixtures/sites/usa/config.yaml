@@ -1,0 +1,32 @@
+base: /usa
+languages:
+  -
+    title: English
+    enabled: true
+    base: /
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    websiteTitle: 'USA Hreflang'
+    navigationTitle: English
+    hreflang: en-US
+    direction: ''
+    flag: us
+    languageId: 0
+  -
+    title: Mexican
+    enabled: true
+    base: /mx
+    typo3Language: es
+    locale: es_ES.UTF-8
+    iso-639-1: es
+    websiteTitle: Mexican
+    navigationTitle: Mexican
+    hreflang: es-MX
+    direction: ''
+    fallbackType: strict
+    fallbacks: ''
+    flag: mx
+    languageId: 2
+rootPageId: 6
+websiteTitle: 'USA Hreflang'

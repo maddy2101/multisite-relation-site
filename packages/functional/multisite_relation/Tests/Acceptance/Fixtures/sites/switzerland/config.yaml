@@ -1,0 +1,32 @@
+base: /switzerland
+languages:
+  -
+    title: Switzerland
+    enabled: true
+    base: /
+    typo3Language: default
+    locale: de_CH.UTF-8
+    iso-639-1: en
+    websiteTitle: 'Switzerland Hreflang'
+    navigationTitle: Switzerland
+    hreflang: de-CH
+    direction: ''
+    flag: ch
+    languageId: 0
+  -
+    title: German
+    enabled: true
+    base: /de
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: ''
+    hreflang: de-DE
+    direction: ''
+    fallbackType: strict
+    fallbacks: ''
+    flag: de
+    languageId: 1
+rootPageId: 17
+websiteTitle: 'Switzerland Hreflang'
