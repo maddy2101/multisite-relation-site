@@ -1,6 +1,14 @@
 {
     "name": "ab-softlab/development-tools",
 	"description": "Helpers we don't want or need as direct project dependencies",
+    "license": ["GPL-2.0-or-later"],
+    "authors": [
+        {
+            "name": "Anja Leichsenring",
+            "email": "aleichsenring@ab-softlab.de",
+            "role": "Developer"
+        }
+    ],
     "config": {
         "bin-dir": "bin/"
     },

@@ -1,0 +1,26 @@
+# Tools section
+
+Tools to ensure code quality are not necessary a dependency of the code they supervise, so can be kept separate.
+This is what this directory does, it collects all the code quality tools away from main project.
+
+## Installation
+
+`ddev composer install --working-dir=tools`
+
+## Usage
+
+### Php-Cs-Fixer
+
+`ddev exec tools/bin/php-cs-fixer fix --config tools/php-cs-fixer/config.php`
+
+Making sure all class files have the proper header comment:
+
+`ddev exec tools/bin/php-cs-fixer fix --config tools/php-cs-fixer/header-comment.php`
+
+### PhpStan
+
+`ddev exec tools/bin/phpstan analyze -c tools/phpstan/phpstan.neon`
+
+to generate the baseline error file:
+
+`ddev exec tools/bin/phpstan analyze -c tools/phpstan/phpstan.neon --generate-baseline=tools/phpstan/phpstan-baseline.neon`

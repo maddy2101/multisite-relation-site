@@ -1,0 +1,15 @@
+includes:
+  - phpstan-baseline.neon
+
+parameters:
+  # Use local .cache dir instead of /tmp
+  tmpDir: ../../.cache/phpstan
+
+  level: 5
+
+  paths:
+    - ../../packages/
+
+#  excludePaths:
+    # Checking acceptance Cest and Support files is cumbersome due to codeception dynamic mixin generation
+#    - ../../typo3/sysext/core/Tests/Acceptance/*
