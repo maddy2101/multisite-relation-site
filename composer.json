@@ -21,6 +21,12 @@
     "typo3/cms-tstemplate": "^12.4",
     "typo3/cms-workspaces": "^12.4"
   },
+   "require-dev": {
+    "codeception/codeception": "^5.1",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-webdriver": "^4.0",
+    "typo3/testing-framework": "^8.2"
+  },
   "config": {
     "sort-packages": true,
     "allow-plugins": {

@@ -1,7 +1,9 @@
 {
   "name": "ab-softlab/multisite-relation",
   "description": "Helper for multisite instances to provide proper language relations.",
-  "license": ["GPL-2.0-or-later"],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
   "type": "typo3-cms-extension",
   "authors": [
     {
@@ -13,14 +15,34 @@
   "require": {
     "typo3/cms-core": "^12.4"
   },
+  "require-dev": {
+    "codeception/codeception": "^5.1",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-webdriver": "^4.0",
+    "typo3/testing-framework": "^8.2"
+  },
+  "extra": {
+    "typo3/cms": {
+      "web-dir": ".Build/Web",
+      "extension-key": "multisite_relation"
+    }
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin",
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
+    }
+  },
   "autoload": {
     "psr-4": {
       "AbSoftlab\\MultisiteRelation\\": "Classes/"
     }
   },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "multisite_relation"
+  "autoload-dev": {
+    "psr-4": {
+      "AbSoftlab\\MultisiteRelation\\Tests\\": "Tests/"
     }
   }
 }
