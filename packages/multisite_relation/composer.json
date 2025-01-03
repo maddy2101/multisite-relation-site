@@ -1,7 +1,15 @@
 {
   "name": "ab-softlab/multisite-relation",
   "description": "Helper for multisite instances to provide proper language relations.",
+  "license": ["GPL-2.0-or-later"],
   "type": "typo3-cms-extension",
+  "authors": [
+    {
+      "name": "Anja Leichsenring",
+      "email": "aleichsenring@ab-softlab.de",
+      "role": "Developer"
+    }
+  ],
   "require": {
     "typo3/cms-core": "^12.4"
   },
