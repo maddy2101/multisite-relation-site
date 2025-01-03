@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e43bc1b8428ffc0f643591020bc0355",
+    "content-hash": "9f8f55a9a25409cb51050aa4946c1c48",
     "packages": [
         {
             "name": "ab-softlab/multisite-relation",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "packages/multisite_relation",
-                "reference": "ac6297dc610dd76e31861983f76ddec46d2aa3e3"
+                "url": "packages/functional/multisite_relation",
+                "reference": "42e2e6ce25257be88a939f1515a074b196ab9aaa"
             },
             "require": {
                 "typo3/cms-core": "^12.4"
@@ -26,6 +26,7 @@
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
+                    "web-dir": ".Build/Web",
                     "extension-key": "multisite_relation"
                 }
             },
@@ -53,6 +54,94 @@
             "transport-options": {
                 "relative": true
             }
+        },
+        {
+            "name": "ab-softlab/site-independent-page",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/sites/site-independent-page",
+                "reference": "b0453edeff3061767be86552b4003a90ace66837"
+            },
+            "require": {
+                "b13/bolt": "^2.3",
+                "typo3/cms-core": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "site-independent-page"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anja Leichsenring",
+                    "email": "aleichsenring@ab-softlab.de",
+                    "role": "Developer"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "b13/bolt",
+            "version": "2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/b13/bolt.git",
+                "reference": "d3fb8a2283f082dd81f6c873ec2331cf4750b804"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/b13/bolt/zipball/d3fb8a2283f082dd81f6c873ec2331cf4750b804",
+                "reference": "d3fb8a2283f082dd81f6c873ec2331cf4750b804",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "typo3/cms-core": "^10.4 || ^11.0 || ^12.0"
+            },
+            "replace": {
+                "cmsexperts/bolt": "*",
+                "typo3-ter/bolt": "*"
+            },
+            "require-dev": {
+                "typo3/coding-standards": "^0.4.0",
+                "typo3/tailor": "^1.1"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "bolt"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "B13\\Bolt\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Bolt - An easy TYPO3 integration basis",
+            "homepage": "https://github.com/b13/bolt",
+            "keywords": [
+                "Integrators",
+                "Site Extension",
+                "Site Package",
+                "TYPO3 CMS",
+                "TypoScript"
+            ],
+            "support": {
+                "issues": "https://github.com/b13/bolt/issues",
+                "source": "https://github.com/b13/bolt/tree/2.3.1"
+            },
+            "time": "2023-09-21T12:56:00+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -5605,6 +5694,66 @@
             "time": "2024-12-10T11:02:25+00:00"
         },
         {
+            "name": "typo3/cms-fluid-styled-content",
+            "version": "v12.4.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/fluid_styled_content.git",
+                "reference": "73a7a673d980d2b5f00dfc08272d858920ab3ecc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/fluid_styled_content/zipball/73a7a673d980d2b5f00dfc08272d858920ab3ecc",
+                "reference": "73a7a673d980d2b5f00dfc08272d858920ab3ecc",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "12.4.24",
+                "typo3/cms-fluid": "12.4.24",
+                "typo3/cms-frontend": "12.4.24"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "fluid_styled_content"
+                },
+                "branch-alias": {
+                    "dev-main": "12.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\FluidStyledContent\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Fluid Styled Content - Fluid templates for TYPO3 content elements.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-fluid-styled-content/main/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-12-10T11:02:25+00:00"
+        },
+        {
             "name": "typo3/cms-frontend",
             "version": "v12.4.24",
             "source": {
@@ -8912,7 +9061,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ab-softlab/multisite-relation": 20
+        "ab-softlab/multisite-relation": 20,
+        "ab-softlab/site-independent-page": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -11,6 +11,7 @@ return [
     'DB' => [
         'Connections' => [
             'Default' => [
+                'charset' => 'utf8',
                 'dbname' => 'db',
                 'driver' => 'pdo_pgsql',
                 'host' => 'db',
