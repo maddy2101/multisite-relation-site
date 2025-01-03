@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f8f55a9a25409cb51050aa4946c1c48",
+    "content-hash": "1b54093402dca72c322e76185d3e6cb5",
     "packages": [
         {
             "name": "ab-softlab/multisite-relation",
@@ -51,6 +51,70 @@
                 }
             ],
             "description": "Helper for multisite instances to provide proper language relations.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "ab-softlab/site-company-a",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/sites/site-company-a",
+                "reference": "bda573e95b1b86650b08be5bd1a6703c52308e40"
+            },
+            "require": {
+                "b13/bolt": "^2.3",
+                "typo3/cms-core": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "site-company-a"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anja Leichsenring",
+                    "email": "aleichsenring@ab-softlab.de",
+                    "role": "Developer"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "ab-softlab/site-company-b",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/sites/site-company-b",
+                "reference": "149332c754b3b97b7162f93d3b2082189ae414de"
+            },
+            "require": {
+                "b13/bolt": "^2.3",
+                "typo3/cms-core": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "site-company-b"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anja Leichsenring",
+                    "email": "aleichsenring@ab-softlab.de",
+                    "role": "Developer"
+                }
+            ],
             "transport-options": {
                 "relative": true
             }
@@ -6011,6 +6075,67 @@
             "time": "2024-12-10T11:02:25+00:00"
         },
         {
+            "name": "typo3/cms-rte-ckeditor",
+            "version": "v12.4.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/rte_ckeditor.git",
+                "reference": "751ec6a28c3ad6421abab5ca70177cdb0f5fcf14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/rte_ckeditor/zipball/751ec6a28c3ad6421abab5ca70177cdb0f5fcf14",
+                "reference": "751ec6a28c3ad6421abab5ca70177cdb0f5fcf14",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "12.4.24"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "suggest": {
+                "typo3/cms-setup": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "rte_ckeditor"
+                },
+                "branch-alias": {
+                    "dev-main": "12.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\RteCKEditor\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS RTE CKEditor - Integration of CKEditor as a Rich Text Editor for the TYPO3 backend.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-rte-ckeditor/main/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-12-10T11:02:25+00:00"
+        },
+        {
             "name": "typo3/cms-scheduler",
             "version": "v12.4.24",
             "source": {
@@ -9062,6 +9187,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "ab-softlab/multisite-relation": 20,
+        "ab-softlab/site-company-a": 20,
+        "ab-softlab/site-company-b": 20,
         "ab-softlab/site-independent-page": 20
     },
     "prefer-stable": false,

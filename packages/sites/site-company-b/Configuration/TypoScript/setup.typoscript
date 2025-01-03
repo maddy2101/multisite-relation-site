@@ -1,7 +1,7 @@
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/Styling/setup.typoscript'
 @import 'EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript'
-@import 'EXT:site-independent-page/Configuration/TypoScript/Lib/*.typoscript'
+@import 'EXT:site-company-b/Configuration/TypoScript/Lib/*.typoscript'
 
 page = PAGE
 page {
@@ -25,15 +25,15 @@ page {
         }
 
         templateRootPaths {
-            0 = EXT:site-independent-page/Resources/Private/Templates/Page/
+            0 = EXT:site-company-b/Resources/Private/Templates/Page/
         }
 
         partialRootPaths {
-            0 = EXT:site-independent-page/Resources/Private/Partials/Page/
+            0 = EXT:site-company-b/Resources/Private/Partials/Page/
         }
 
         layoutRootPaths {
-            0 = EXT:site-independent-page/Resources/Private/Layouts/Page/
+            0 = EXT:site-company-b/Resources/Private/Layouts/Page/
         }
     }
 }
