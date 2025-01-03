@@ -1,5 +1,10 @@
 {
+    "name": "ab-softlab/multisite-relation-site",
+    "description": "development environment for ext:multisite_relation",
+    "license": "GPL-2.0-or-later",
     "require": {
+        "php": "^8.1",
+        "ab-softlab/multisite-relation": "dev-main",
         "typo3/cms-backend": "^12.4",
         "typo3/cms-belog": "^12.4",
         "typo3/cms-beuser": "^12.4",
@@ -15,9 +20,21 @@
         "typo3/cms-workspaces": "^12.4"
     },
     "config": {
+        "sort-packages": true,
         "allow-plugins": {
             "typo3/class-alias-loader": true,
             "typo3/cms-composer-installers": true
         }
-    }
+    },
+    "extra": {
+		"typo3/cms":{
+			"cms-package-dir":"{$vendor-dir}/typo3/cms"
+		}
+	},
+    "repositories": [
+		{
+			"type": "path",
+			"url": "packages/*"
+		}
+	]
 }

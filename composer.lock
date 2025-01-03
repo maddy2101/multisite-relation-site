@@ -4,8 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0ce821bba30654a89695aae451d6f6b",
+    "content-hash": "260e5d33136bb45624184ea4466ffd7f",
     "packages": [
+        {
+            "name": "ab-softlab/multisite-relation",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/multisite_relation",
+                "reference": "d5e424dac4fbfeb36204a232d206ec02586e498f"
+            },
+            "require": {
+                "typo3/cms-core": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "multisite_relation"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AbSoftlab\\MultisiteRelation\\": "Classes/"
+                }
+            },
+            "description": "Helper for multisite instances to provide proper language relations.",
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "v3.0.1",
@@ -6270,10 +6297,14 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "ab-softlab/multisite-relation": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "php": "^8.1"
+    },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
