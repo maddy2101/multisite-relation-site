@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the TYPO3 CMS project.
+ * This file is part of ext:multisite_relation.
  *
  * It is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, either version 2
@@ -15,9 +15,9 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace B13\HreflangMultisite\Tests\Acceptance\Support\Helper;
+namespace AbSoftlab\MultisiteRelation\Tests\Acceptance\Support\Helper;
 
-use B13\HreflangMultisite\Tests\Acceptance\Support\ApplicationTester;
+use AbSoftlab\MultisiteRelation\Tests\Acceptance\Support\ApplicationTester;
 use TYPO3\TestingFramework\Core\Acceptance\Helper\AbstractModalDialog;
 
 /**

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of ext:multisite_relation.
  *
@@ -15,16 +13,20 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace AbSoftlab\MultisiteRelation\Tests\Acceptance\Support;
+namespace AbSoftlab\MultisiteRelation\Tests\Acceptance\Application;
 
-use AbSoftlab\MultisiteRelation\Tests\Acceptance\Support\_generated\ApplicationTesterActions;
-use TYPO3\TestingFramework\Core\Acceptance\Step\FrameSteps;
+use AbSoftlab\MultisiteRelation\Tests\Acceptance\Support\ApplicationTester;
 
-/**
- * Default backend admin or editor actor in the backend
-*/
-class ApplicationTester extends \Codeception\Actor
+class TestCest
 {
-    use ApplicationTesterActions;
-    use FrameSteps;
+    public function _before(ApplicationTester $I)
+    {
+        $I->useExistingSession('admin');
+        $I->switchToMainFrame();
+    }
+
+    public function dummy(ApplicationTester $I)
+    {
+        $I->see('foo');
+    }
 }

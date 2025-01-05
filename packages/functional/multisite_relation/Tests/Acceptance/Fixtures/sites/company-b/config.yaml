@@ -3,7 +3,7 @@ languages:
   -
     title: English
     enabled: true
-    locale: en_GB.utf8
+    locale: en_US.UTF-8
     hreflang: ''
     base: /
     websiteTitle: ''
@@ -35,11 +35,11 @@ languages:
     flag: hu
     languageId: 4
 rootPageId: 4
+sitePackage: 'site-company-b'
+websiteTitle: ''
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
     map:
       /: 0
       sitemap.xml: 1533906435
-sitePackage: site-company-b
-websiteTitle: ''

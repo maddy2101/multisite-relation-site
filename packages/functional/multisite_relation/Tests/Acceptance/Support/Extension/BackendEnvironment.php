@@ -3,11 +3,16 @@
 declare(strict_types=1);
 
 /*
- * This file is part of TYPO3 CMS-based extension "hreflang_multisite" by b13.
+ * This file is part of ext:multisite_relation.
  *
  * It is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, either version 2
  * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
  */
 
 namespace AbSoftlab\MultisiteRelation\Tests\Acceptance\Support\Extension;
@@ -38,6 +43,9 @@ class BackendEnvironment extends BaseBackendEnvironment
         ],
         'testExtensionsToLoad' => [
             'ab-softlab/multisite-relation',
+            'ab-softlab/site-company-a',
+            'ab-softlab/site-company-b',
+            'ab-softlab/site-independent-page',
         ],
         'csvDatabaseFixtures' => [
             __DIR__ . '/../../Fixtures/BackendEnvironment.csv',
@@ -58,7 +66,8 @@ class BackendEnvironment extends BaseBackendEnvironment
         ],
     ];
 
-    public function bootstrapTypo3Environment(SuiteEvent $suiteEvent) {
+    public function bootstrapTypo3Environment(SuiteEvent $suiteEvent)
+    {
         parent::bootstrapTypo3Environment($suiteEvent);
 
         $testbase = new Testbase();
@@ -66,7 +75,7 @@ class BackendEnvironment extends BaseBackendEnvironment
         $projectRoot = $composerPackageManager->getRootPath();
 
         // provide fixture site configuration
-        @symlink($projectRoot . '/Tests/Acceptance/Fixtures/sites', $projectRoot. '/.Build/Web/typo3conf/sites');
+        @symlink($projectRoot . '/Tests/Acceptance/Fixtures/sites', $projectRoot . '/.Build/Web/typo3conf/sites');
 
         $copyFiles = [
             [

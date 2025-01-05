@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of ext:multisite_relation.
  *
@@ -15,16 +13,16 @@ declare(strict_types=1);
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace AbSoftlab\MultisiteRelation\Tests\Acceptance\Support;
+namespace AbSoftlab\MultisiteRelation\Tests\Functional;
 
-use AbSoftlab\MultisiteRelation\Tests\Acceptance\Support\_generated\ApplicationTesterActions;
-use TYPO3\TestingFramework\Core\Acceptance\Step\FrameSteps;
+use PHPUnit\Framework\Attributes\Test;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
-/**
- * Default backend admin or editor actor in the backend
-*/
-class ApplicationTester extends \Codeception\Actor
+class DummyTest extends FunctionalTestCase
 {
-    use ApplicationTesterActions;
-    use FrameSteps;
+    #[Test]
+    public function dummy()
+    {
+        self::assertTrue(false);
+    }
 }

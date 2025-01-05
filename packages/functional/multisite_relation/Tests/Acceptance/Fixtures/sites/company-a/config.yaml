@@ -1,45 +1,45 @@
-base: 'https://multisite-relation-site.ddev.site/company-b/'
+base: 'https://multisite-relation-site.ddev.site/company-a/'
 languages:
   -
     title: English
     enabled: true
-    locale: en_GB.utf8
+    locale: en_US.UTF-8
     hreflang: ''
     base: /
     websiteTitle: ''
-    navigationTitle: B-English
+    navigationTitle: A-English
     flag: gb
     languageId: 0
   -
-    title: Bulgarian
+    title: German
     enabled: true
-    locale: bg_BG
+    locale: de_DE
     hreflang: ''
-    base: /bg/
+    base: /de-de/
     websiteTitle: ''
-    navigationTitle: B-Bulgarian
+    navigationTitle: A-Deutsch
     fallbackType: strict
     fallbacks: ''
-    flag: bg
-    languageId: 3
+    flag: de
+    languageId: 1
   -
-    title: Hungarian
+    title: Norwegian
     enabled: true
-    locale: hu_HU
+    locale: no_NO
     hreflang: ''
-    base: /hu/
+    base: /no/
     websiteTitle: ''
-    navigationTitle: B-Magyar
+    navigationTitle: A-Norsk
     fallbackType: strict
     fallbacks: ''
-    flag: hu
-    languageId: 4
-rootPageId: 4
+    flag: 'no'
+    languageId: 2
+rootPageId: 3
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
     map:
       /: 0
       sitemap.xml: 1533906435
-sitePackage: site-company-b
+sitePackage: site-company-a
 websiteTitle: ''

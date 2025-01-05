@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  AbSoftlab\MultisiteRelation\:
+      resource: '../Classes/*'
+
+  AbSoftlab\MultisiteRelation\EventListener\HrefLangTagsListener:
+    tags:
+      - name: event.listener
+        identifier: 'multisite_relation/HrefLangTagListener'
+        after: 'typo3-seo/hreflangGenerator'

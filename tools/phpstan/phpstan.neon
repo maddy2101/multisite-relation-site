@@ -9,6 +9,9 @@ parameters:
 
   paths:
     - ../../packages/
+  excludePaths:
+    - ../../packages/*/*/Tests/*
+    - ../../packages/*/*/Build/*
 
 #  excludePaths:
     # Checking acceptance Cest and Support files is cumbersome due to codeception dynamic mixin generation
