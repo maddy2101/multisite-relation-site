@@ -8,6 +8,7 @@ $tca = [
             'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_enable.label',
             'description' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_enable.description',
             'onChange' => 'reload',
+            'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'check',
                 'renderType' => 'checkboxToggle',
@@ -16,15 +17,13 @@ $tca = [
                         'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_enable.check.label',
                     ],
                 ],
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true,
-                ],
             ],
         ],
         'multisite_relations' => [
             'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations.label',
             'description' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations.description',
             'displayCond' => 'FIELD:multisite_relations_enable:REQ:true',
+            'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'group',
                 'allowed' => 'pages',
@@ -34,9 +33,6 @@ $tca = [
                         'additionalSearchFields' => 'nav_title, url',
                         'addWhere' => 'AND pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT,
                     ],
-                ],
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true,
                 ],
             ],
         ],
@@ -49,6 +45,7 @@ $tca = [
                     //                    'FIELD:multisite_relations:REQ:true',
                 ],
             ],
+            'l10n_mode' => 'exclude',
             'config' => [
                 //                'type' => 'select',
                 //                'renderType' => 'selectCheckBox',
@@ -61,9 +58,6 @@ $tca = [
                     ],
                 ],
                 'itemsProcFunc' => \AbSoftlab\MultisiteRelation\TCA\ItemsProcFunc\PagesXDefaultSelect::class . '->selectedRelationPages',
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true,
-                ],
             ],
         ],
     ],

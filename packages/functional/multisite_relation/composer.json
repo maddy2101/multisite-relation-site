@@ -13,9 +13,11 @@
     }
   ],
   "require": {
-    "typo3/cms-core": "^12.4"
+    "typo3/cms-core": "^12.4",
+    "typo3/cms-seo": "^12.4"
   },
   "require-dev": {
+    "b13/bolt": "^2.3",
     "codeception/codeception": "^5.1",
     "codeception/module-asserts": "^3.0",
     "codeception/module-webdriver": "^4.0",

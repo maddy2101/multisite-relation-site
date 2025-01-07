@@ -24,6 +24,11 @@
  * before instantiating the test suites.
  */
 (static function () {
+    $composerPackageManager = new \TYPO3\TestingFramework\Composer\ComposerPackageManager();
+    $fixtureExtensionPath = $composerPackageManager->getRootPath() . '/Tests/Fixtures/Extensions/';
+    $composerPackageManager->getPackageInfoWithFallback($fixtureExtensionPath . '/site-company-a');
+    $composerPackageManager->getPackageInfoWithFallback($fixtureExtensionPath . '/site-company-b');
+    $composerPackageManager->getPackageInfoWithFallback($fixtureExtensionPath . '/site-independent-page');
     $testbase = new \TYPO3\TestingFramework\Core\Testbase();
     $testbase->defineOriginalRootPath();
     $testbase->createDirectory(ORIGINAL_ROOT . 'typo3temp/var/tests');
