@@ -13,10 +13,10 @@ return [
             'Default' => [
                 'charset' => 'utf8',
                 'dbname' => 'db',
-                'driver' => 'pdo_pgsql',
+                'driver' => 'mysqli',
                 'host' => 'db',
                 'password' => 'db',
-                'port' => 5432,
+                'port' => 3306,
                 'user' => 'db',
             ],
         ],

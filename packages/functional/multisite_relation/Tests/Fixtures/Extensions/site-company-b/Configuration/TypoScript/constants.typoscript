@@ -1,1 +1,2 @@
 @import 'EXT:seo/Configuration/TypoScript/XmlSitemap/constants.typoscript'
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'

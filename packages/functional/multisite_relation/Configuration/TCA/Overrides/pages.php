@@ -31,7 +31,7 @@ $tca = [
                 'suggestOptions' => [
                     'default' => [
                         'additionalSearchFields' => 'nav_title, url',
-                        'addWhere' => 'AND pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT,
+                        'addWhere' => 'AND (pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT .' OR pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_SHORTCUT.')',
                     ],
                 ],
             ],
@@ -42,13 +42,10 @@ $tca = [
             'displayCond' => [
                 'AND' => [
                     'FIELD:multisite_relations_enable:REQ:true',
-                    //                    'FIELD:multisite_relations:REQ:true',
                 ],
             ],
             'l10n_mode' => 'exclude',
             'config' => [
-                //                'type' => 'select',
-                //                'renderType' => 'selectCheckBox',
                 'type' => 'radio',
                 // items will be provided by itemsProcFunc, but some validation insists on it being present -.-
                 'items' => [

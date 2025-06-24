@@ -40,7 +40,7 @@ class DummyTest extends FunctionalTestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->importCSVDataSet(__DIR__ . '../Fixtures/Database/BackendEnvironment.csv');
+        $this->importCSVDataSet(__DIR__ . '/../Fixtures/Database/BackendEnvironment.csv');
 
     }
 
@@ -51,6 +51,6 @@ class DummyTest extends FunctionalTestCase
             new InternalRequest('https://www.company-a.com/')
         );
         self::assertSame(200, $response->getStatusCode());
-//        self::assertStringContainsString('',$response->getBody()->getContents());
+        self::assertStringContainsString('',$response->getBody()->getContents());
     }
 }
