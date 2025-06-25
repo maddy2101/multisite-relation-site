@@ -15,7 +15,6 @@
 
 namespace AbSoftlab\MultisiteRelation\Tests\Functional\DataManipulation;
 
-use AbSoftlab\MultisiteRelation\Tests\Functional\AbstractTest;
 use AbSoftlab\MultisiteRelation\Tests\Functional\AbstractTestCase;
 use PHPUnit\Framework\Attributes\Test;
 use TYPO3\CMS\Core\Localization\LanguageServiceFactory;

@@ -37,7 +37,7 @@ page {
         }
 
         dataProcessing {
-            10 = language-menu
+            10 = AbSoftlab\MultisiteRelation\DataProcessing\MultisiteLanguageMenuProcessor
             10 {
                 as = languageNavigation
             }

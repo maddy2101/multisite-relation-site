@@ -5,19 +5,15 @@
     <f:if condition="{languageNavigation}">
         <ul id="language" class="language-menu">
             <f:for each="{languageNavigation}" as="item">
-                <li class="{f:if(condition: item.active, then: 'active')}
-                    {f:if(condition: item.available, else: ' text-muted')}">
-                    <f:if condition="{item.available}">
-                        <f:then>
-                            <a href="{item.link}" hreflang="{item.hreflang}"
-                               title="{item.navigationTitle}">
-                                <span>{item.navigationTitle}</span>
-                            </a>
-                        </f:then>
-                        <f:else>
-                            <span>{item.navigationTitle}</span>
-                        </f:else>
-                    </f:if>
+                <li class="{f:if(condition: item.isActiveLanguage, then: 'active')}">
+                    <f:link.page
+                            pageUid="{item.uid}"
+                            language="{item.language.languageId}"
+                            class="language__link{f:if(condition: '{item.isActiveLanguage} == TRUE', then: ' active')}"
+                            title="{item.language.navigationTitle}">
+
+                        <i class="language__title">{item.language.navigationTitle}</i>
+                    </f:link.page>
                 </li>
             </f:for>
         </ul>

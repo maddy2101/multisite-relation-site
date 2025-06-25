@@ -26,7 +26,7 @@ class PagesXDefaultSelect
 
         $items =  $params['items'];
         $items[] = [
-            'label' => '[' . $params['row']['uid'] . '] ' . $params['row']['title'] . ' ('.$this->getLanguageService()->sL('LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:current_page').')',
+            'label' => '[' . $params['row']['uid'] . '] ' . $params['row']['title'] . ' (' . $this->getLanguageService()->sL('LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:current_page') . ')',
             'value' => $params['row']['uid'],
         ];
         $selectedRelations = is_array($params['row']['multisite_relations']) ? $params['row']['multisite_relations'] : [];

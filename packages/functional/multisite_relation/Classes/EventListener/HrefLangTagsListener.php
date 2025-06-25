@@ -15,22 +15,17 @@
 
 namespace AbSoftlab\MultisiteRelation\EventListener;
 
+use AbSoftlab\MultisiteRelation\Service\RelatedPagesService;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
-use TYPO3\CMS\Core\Context\Context;
-use TYPO3\CMS\Core\Context\LanguageAspect;
-use TYPO3\CMS\Core\Database\RelationHandler;
-use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Routing\PageArguments;
-use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Site\SiteFinder;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Event\ModifyHrefLangTagsEvent;
 
 class HrefLangTagsListener
 {
     public function __construct(
-        private readonly RelationHandler $relationHandler,
         private readonly SiteFinder $siteFinder,
+        private readonly RelatedPagesService $relatedPagesService
     ) {}
 
     public function __invoke(ModifyHrefLangTagsEvent $event): void
@@ -39,40 +34,15 @@ class HrefLangTagsListener
         /** @var PageArguments $routing */
         $routing = $event->getRequest()->getAttribute('routing');
         $pageId = $routing->getPageId();
-        $pageRecord = BackendUtility::getRecord('pages',$pageId);
-        if ($pageRecord['multisite_relations_enable'] !== 1) {
-            return;
+        $pageRecord = BackendUtility::getRecord('pages', $pageId);
+        $pages = $this->relatedPagesService->getRelatedPages($pageRecord);
+        foreach ($pages as $page) {
+            $site = $this->siteFinder->getSiteByPageId($page['uid']);
+            $language = $page['language'];
+            $uri = $site->getRouter()->generateUri($page['uid'], ['_language' => $language]);
+            $hreflangs[(string)$language->getLocale()] = (string)$uri;
         }
-        if ($pageRecord['multisite_relations'] > 0) {
-            $fieldConfig = $GLOBALS['TCA']['pages']['columns']['multisite_relations'];
-            $relationHandler = GeneralUtility::makeInstance(RelationHandler::class);
-            $relationHandler->start(
-                'multisite_relations',
-                $fieldConfig['config']['allowed'] ?? '',
-                $fieldConfig['config']['MM'] ?? '',
-                $pageId,
-                'pages',
-                $fieldConfig['config'] ?? []
-            );
-            $selectedRelations = $relationHandler->getFromDB()['pages'] ?? [];
-            if (!empty($selectedRelations)) {
-                foreach ($selectedRelations as $selectedRelation) {
-                    $site = $this->siteFinder->getSiteByPageId($selectedRelation['uid']);
-                    foreach ($site->getLanguages() as $language) {
-                        $pageRepository = $this->buildPageRepository(new LanguageAspect($language->getLanguageId()));
-                        $page = $pageRepository->getPage($selectedRelation['uid']);
-                        // if translation is not available (e.g. hidden), the original record is returned.
-                        // skip further processing then
-                        if ($language->getLanguageId() > 0 && !isset($page['_PAGES_OVERLAY'])) {
-                            continue;
-                        }
-                        $uri = $site->getRouter()->generateUri($page['uid'], ['_language' => $language]);
-                        $hreflangs[(string)$language->getLocale()] = (string)$uri;
-                    }
 
-                }
-            }
-        }
         $hreflangs = array_merge($hreflangs, $event->getHrefLangs());
         if ($pageRecord['multisite_relations_xdefault'] > 0) {
             $pageId = $pageRecord['multisite_relations_xdefault'];
@@ -85,21 +55,4 @@ class HrefLangTagsListener
         $event->setHrefLangs($hreflangs);
     }
 
-    /**
-     * Builds PageRepository instance without depending on global context, e.g.
-     * not automatically overlaying records based on current request language.
-     */
-    protected function buildPageRepository(?LanguageAspect $languageAspect = null): PageRepository
-    {
-        // clone global context object (singleton)
-        $context = clone GeneralUtility::makeInstance(Context::class);
-        $context->setAspect(
-            'language',
-            $languageAspect ?? GeneralUtility::makeInstance(LanguageAspect::class)
-        );
-        return GeneralUtility::makeInstance(
-            PageRepository::class,
-            $context
-        );
-    }
 }

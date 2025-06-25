@@ -15,7 +15,6 @@
 
 namespace AbSoftlab\MultisiteRelation\Tests\Functional\Hreflang;
 
-use AbSoftlab\MultisiteRelation\Tests\Functional\AbstractTest;
 use AbSoftlab\MultisiteRelation\Tests\Functional\AbstractTestCase;
 use PHPUnit\Framework\Attributes\Test;
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;

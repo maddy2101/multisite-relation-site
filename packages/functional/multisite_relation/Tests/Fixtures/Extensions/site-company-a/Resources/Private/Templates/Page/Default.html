@@ -1,24 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <section class="content" style="max-width: 800px;">
-    <f:debug inline="true">{languageNavigation}</f:debug>
     <!--TYPO3SEARCH_begin-->
     <f:if condition="{languageNavigation}">
         <ul id="language" class="language-menu">
             <f:for each="{languageNavigation}" as="item">
-                <li class="{f:if(condition: item.active, then: 'active')}
-                    {f:if(condition: item.available, else: ' text-muted')}">
+                <li class="{f:if(condition: item.isActiveLanguage, then: 'active')}">
                     <f:link.page
                             pageUid="{item.uid}"
                             language="{item.language.languageId}"
                             class="language__link{f:if(condition: '{item.isActiveLanguage} == TRUE', then: ' active')}"
                             title="{item.language.navigationTitle}">
-                                    <span class="language__flag">
-                                        <f:variable name="flagIconPath">{udg:image.flagIcon(path: 'EXT:udg_master_sitepackage/Resources/Public/Icons/Flags/', languageFlag: item.language.flag)}</f:variable>
-                                        <img width="16" height="16"
-                                             src="{f:uri.image( src: flagIconPath)}"
-                                             alt="Flag icon">
-                                    </span>
+
                         <i class="language__title">{item.language.navigationTitle}</i>
                     </f:link.page>
                 </li>
