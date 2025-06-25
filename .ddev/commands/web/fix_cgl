@@ -1,0 +1,7 @@
+echo 'executing phpstan'
+ddev exec tools/bin/phpstan analyze -c tools/phpstan/phpstan.neon
+
+echo 'executing php-cs-fixer tasks'
+tools/bin/php-cs-fixer fix --config tools/php-cs-fixer/header-comment.php
+tools/bin/php-cs-fixer fix --config tools/php-cs-fixer/config.php
+
