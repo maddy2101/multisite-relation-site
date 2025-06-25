@@ -1,4 +1,4 @@
-base: 'https://multisite-relation-site.ddev.site/independent/'
+base: 'https://www.company-c.com/'
 languages:
   -
     title: English

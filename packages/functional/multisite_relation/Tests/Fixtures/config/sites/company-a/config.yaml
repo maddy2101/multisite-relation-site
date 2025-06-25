@@ -1,8 +1,4 @@
-base: 'https://multisite-relation-site.ddev.site/company-a/'
-baseVariants:
-  -
-    base: 'https://www.company-a.com/'
-    condition: 'applicationContext == "Testing"'
+base: 'https://www.company-a.com/'
 languages:
   -
     title: English

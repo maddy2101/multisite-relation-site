@@ -5,7 +5,10 @@ php_version: "8.1"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames: []
-additional_fqdns: []
+additional_fqdns:
+    - www.company-a.com
+    - www.company-b.com
+    - www.company-c.com
 database:
     type: mariadb
     version: "11.4"

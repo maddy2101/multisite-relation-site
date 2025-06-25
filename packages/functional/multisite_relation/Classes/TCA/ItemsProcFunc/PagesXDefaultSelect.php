@@ -24,7 +24,7 @@ class PagesXDefaultSelect
     {
         $items = [];
         $items[] = [
-            'label' => '['.$params['row']['uid'].'] ' . $params['row']['title'] . ' (current page)',
+            'label' => '[' . $params['row']['uid'] . '] ' . $params['row']['title'] . ' (current page)',
             'value' => $params['row']['uid'],
         ];
         $selectedRelations = is_array($params['row']['multisite_relations']) ? $params['row']['multisite_relations'] : [];
@@ -35,7 +35,7 @@ class PagesXDefaultSelect
         }
         foreach ($selectedRelations as $selectedRelation) {
             $items[] = [
-                'label' => '['.$selectedRelation['uid'].'] ' . $selectedRelation['title'],
+                'label' => '[' . $selectedRelation['uid'] . '] ' . $selectedRelation['title'],
                 'value' => $selectedRelation['uid'],
             ];
         }

@@ -31,7 +31,7 @@ $tca = [
                 'suggestOptions' => [
                     'default' => [
                         'additionalSearchFields' => 'nav_title, url',
-                        'addWhere' => 'AND (pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT .' OR pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_SHORTCUT.')',
+                        'addWhere' => 'AND (pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT . ' OR pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_SHORTCUT . ')',
                     ],
                 ],
             ],
@@ -39,11 +39,7 @@ $tca = [
         'multisite_relations_xdefault' => [
             'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_xdefault.label',
             'description' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_xdefault.description',
-            'displayCond' => [
-                'AND' => [
-                    'FIELD:multisite_relations_enable:REQ:true',
-                ],
-            ],
+            'displayCond' => 'FIELD:multisite_relations_enable:REQ:true',
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'radio',
