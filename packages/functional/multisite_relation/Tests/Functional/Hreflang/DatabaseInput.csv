@@ -23,77 +23,77 @@
 ,"9","4","1750760716","1750760716","0","0","3","5",NULL,"{""l10n_parent"":""0"",""l10n_diffsource"":"""",""hidden"":""0"",""sorting_foreign"":""1"",""autoplay"":""0"",""sys_language_uid"":""0"",""uid_local"":""4"",""uid_foreign"":""3"",""tablenames"":""tt_content"",""fieldname"":""assets"",""title"":"""",""description"":"""",""alternative"":"""",""link"":"""",""crop"":""{\""default\"":{\""cropArea\"":{\""x\"":0,\""y\"":0,\""width\"":1,\""height\"":1},\""selectedRatio\"":\""NaN\"",\""focusArea\"":null}}""}","0","0","0","0","4","7","tt_content","assets","1",NULL,NULL,NULL,,"{""default"":{""cropArea"":{""x"":0,""y"":0,""width"":1,""height"":1},""selectedRatio"":""NaN"",""focusArea"":null}}","0"
 ,"10","4","1750760726","1750760726","0","0","4","5",NULL,"{""l10n_parent"":""0"",""l10n_diffsource"":"""",""hidden"":""0"",""sorting_foreign"":""1"",""autoplay"":""0"",""sys_language_uid"":""0"",""uid_local"":""4"",""uid_foreign"":""3"",""tablenames"":""tt_content"",""fieldname"":""assets"",""title"":"""",""description"":"""",""alternative"":"""",""link"":"""",""crop"":""{\""default\"":{\""cropArea\"":{\""x\"":0,\""y\"":0,\""width\"":1,\""height\"":1},\""selectedRatio\"":\""NaN\"",\""focusArea\"":null}}""}","0","0","0","0","4","8","tt_content","assets","1",NULL,NULL,NULL,,"{""default"":{""cropArea"":{""x"":0,""y"":0,""width"":1,""height"":1},""selectedRatio"":""NaN"",""focusArea"":null}}","0"
 "pages"
-,"uid","pid","deleted","hidden","starttime","endtime","sys_language_uid","l10n_parent","l10n_source","t3_origuid","title","doktype","is_siteroot","url","shortcut","shortcut_mode","subtitle","target","media","keywords","abstract","categories","slug","seo_title","multisite_relations_enable","multisite_relations","multisite_relations_xdefault"
-,"1","0","0","0","0","0","0","0","0","0","Company Pages","254","0",,"0","0",,,"0",NULL,NULL,"0","/",,"0","0","0"
-,"2","1","0","0","0","0","0","0","0","0","independent page","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"0","0","0"
-,"3","1","0","0","0","0","0","0","0","0","Company Page A","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"1","1","3"
-,"4","1","0","0","0","0","0","0","0","0","Company Page B","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"1","1","3"
-,"5","3","0","0","0","0","0","0","0","0","Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1",,"1","1","5"
-,"6","3","0","0","0","0","0","0","0","0","Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2",,"0","0","0"
-,"7","5","0","0","0","0","0","0","0","0","Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11",,"0","0","0"
-,"8","5","0","0","0","0","0","0","0","0","Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-12",,"0","0","0"
-,"9","5","0","0","0","0","0","0","0","0","Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-13",,"0","0","0"
-,"10","6","0","0","0","0","0","0","0","0","Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2/page-21",,"0","0","0"
-,"11","6","0","0","0","0","0","0","0","0","Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2/page-22",,"0","0","0"
-,"12","7","0","0","0","0","0","0","0","0","Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11/subpage-111",,"0","0","0"
-,"13","4","0","0","0","0","0","0","0","0","Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1",,"0","0","0"
-,"14","4","0","0","0","0","0","0","0","0","Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2",,"0","0","0"
-,"15","4","0","0","0","0","0","0","0","0","Subpage 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-3",,"0","0","0"
-,"16","14","0","0","0","0","0","0","0","0","Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-21",,"0","0","0"
-,"17","14","0","0","0","0","0","0","0","0","Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-22",,"0","0","0"
-,"18","13","0","0","0","0","0","0","0","0","Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11",,"0","0","0"
-,"19","13","0","0","0","0","0","0","0","0","Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-12",,"0","0","0"
-,"20","13","0","0","0","0","0","0","0","0","Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-13",,"0","0","0"
-,"21","18","0","0","0","0","0","0","0","0","Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11/subpage-111",,"0","0","0"
-,"22","2","0","0","0","0","0","0","0","0","Page 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-1",,"0","0","0"
-,"23","2","0","0","0","0","0","0","0","0","Page 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-2",,"0","0","0"
-,"24","2","0","0","0","0","0","0","0","0","Page 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-3",,"0","0","0"
-,"25","22","0","0","0","0","0","0","0","0","Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-1/page-11",,"0","0","0"
-,"26","22","0","0","0","0","0","0","0","0","Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-1/page-12",,"0","0","0"
-,"27","1","0","0","0","0","1","2","2","0","[Translate to German:] independent page","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"0","0","0"
-,"28","2","0","0","0","0","1","22","22","0","[Translate to German:] Page 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-1",,"0","0","0"
-,"29","22","0","0","0","0","1","25","25","0","[Translate to German:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-1/translate-to-german-page-11",,"0","0","0"
-,"30","22","0","0","0","0","1","26","26","0","[Translate to German:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-1/translate-to-german-page-12",,"0","0","0"
-,"31","2","0","0","0","0","1","23","23","0","[Translate to German:] Page 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-2",,"0","0","0"
-,"32","2","0","0","0","0","1","24","24","0","[Translate to German:] Page 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-3",,"0","0","0"
-,"33","1","0","0","0","0","1","3","3","0","[Translate to German:] Company Page A","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"1","1","0"
-,"34","1","0","0","0","0","2","3","3","0","[Translate to Norwegian:] Company Page A","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"1","1","0"
-,"35","3","0","0","0","0","1","5","5","0","[Translate to German:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1",,"1","1","0"
-,"36","3","0","0","0","0","2","5","5","0","[Translate to Norwegian:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1",,"1","1","0"
-,"37","5","0","0","0","0","1","7","7","0","[Translate to German:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-11",,"0","0","0"
-,"38","5","0","0","0","0","2","7","7","0","[Translate to Norwegian:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-11",,"0","0","0"
-,"39","7","0","0","0","0","1","12","12","0","[Translate to German:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-11/translate-to-german-subpage-111",,"0","0","0"
-,"40","5","0","0","0","0","1","8","8","0","[Translate to German:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-12",,"0","0","0"
-,"41","5","0","0","0","0","2","8","8","0","[Translate to Norwegian:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-12",,"0","0","0"
-,"42","7","0","0","0","0","2","12","12","0","[Translate to Norwegian:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-11/translate-to-norwegian-subpage-111",,"0","0","0"
-,"43","5","0","0","0","0","1","9","9","0","[Translate to German:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-13",,"0","0","0"
-,"44","5","0","0","0","0","2","9","9","0","[Translate to Norwegian:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-13",,"0","0","0"
-,"45","3","0","0","0","0","1","6","6","0","[Translate to German:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-2",,"0","0","0"
-,"46","3","0","0","0","0","2","6","6","0","[Translate to Norwegian:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-2",,"0","0","0"
-,"47","6","0","0","0","0","1","10","10","0","[Translate to German:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-2/translate-to-german-page-21",,"0","0","0"
-,"48","6","0","0","0","0","2","10","10","0","[Translate to Norwegian:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-2/translate-to-norwegian-page-21",,"0","0","0"
-,"49","6","0","0","0","0","1","11","11","0","[Translate to German:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-2/translate-to-german-page-22",,"0","0","0"
-,"50","6","0","0","0","0","2","11","11","0","[Translate to Norwegian:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-2/translate-to-norwegian-page-22",,"0","0","0"
-,"51","1","0","0","0","0","3","4","4","0","[Translate to Bulgarian:] Company Page B","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"1","1","3"
-,"52","1","0","0","0","0","4","4","4","0","[Translate to Hungarian:] Company Page B","1","1",,"0","0",,,"0",NULL,NULL,"0","/",,"1","1","3"
-,"53","13","0","0","0","0","3","18","18","0","[Translate to Bulgarian:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-bulgarian-page-11",,"0","0","0"
-,"54","13","0","0","0","0","4","18","18","0","[Translate to Hungarian:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-hungarian-page-11",,"0","0","0"
-,"55","4","0","0","0","0","3","13","13","0","[Translate to Bulgarian:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-1",,"1","1","5"
-,"56","4","0","0","0","0","4","13","13","0","[Translate to Hungarian:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-1",,"1","1","5"
-,"57","18","0","0","0","0","3","21","21","0","[Translate to Bulgarian:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-bulgarian-page-11/translate-to-bulgarian-subpage-111",,"0","0","0"
-,"58","18","0","0","0","0","4","21","21","0","[Translate to Hungarian:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-hungarian-page-11/translate-to-hungarian-subpage-111",,"0","0","0"
-,"59","13","0","0","0","0","3","19","19","0","[Translate to Bulgarian:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-1/translate-to-bulgarian-page-12",,"0","0","0"
-,"60","13","0","0","0","0","4","19","19","0","[Translate to Hungarian:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-1/translate-to-hungarian-page-12",,"0","0","0"
-,"61","13","0","0","0","0","3","20","20","0","[Translate to Bulgarian:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-1/translate-to-bulgarian-page-13",,"0","0","0"
-,"62","13","0","0","0","0","4","20","20","0","[Translate to Hungarian:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-1/translate-to-hungarian-page-13",,"0","0","0"
-,"63","4","0","0","0","0","3","14","14","0","[Translate to Bulgarian:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-2",,"0","0","0"
-,"64","4","0","0","0","0","4","14","14","0","[Translate to Hungarian:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-2",,"0","0","0"
-,"65","14","0","0","0","0","3","16","16","0","[Translate to Bulgarian:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-2/translate-to-bulgarian-page-21",,"0","0","0"
-,"66","14","0","0","0","0","4","16","16","0","[Translate to Hungarian:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-2/translate-to-hungarian-page-21",,"0","0","0"
-,"67","14","0","0","0","0","3","17","17","0","[Translate to Bulgarian:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-2/translate-to-bulgarian-page-22",,"0","0","0"
-,"68","14","0","0","0","0","4","17","17","0","[Translate to Hungarian:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-2/translate-to-hungarian-page-22",,"0","0","0"
-,"69","4","0","0","0","0","3","15","15","0","[Translate to Bulgarian:] Subpage 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-3",,"0","0","0"
-,"70","4","0","0","0","0","4","15","15","0","[Translate to Hungarian:] Subpage 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-3",,"0","0","0"
+,"uid","pid","multisite_relations_enable","multisite_relations","multisite_relations_xdefault","deleted","hidden","sys_language_uid","l10n_parent","l10n_source","t3_origuid","title","doktype","is_siteroot","url","shortcut","shortcut_mode","subtitle","target","media","keywords","abstract","categories","slug","seo_title"
+,"1","0","0","0","0","0","0","0","0","0","0","Company Pages","254","0",,"0","0",,,"0",NULL,NULL,"0","/",
+,"2","1","0","0","3","0","0","0","0","0","0","independent page","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"3","1","1","1","3","0","0","0","0","0","0","Company Page A","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"4","1","1","1","3","0","0","0","0","0","0","Company Page B","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"5","3","1","1","5","0","0","0","0","0","0","Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1",
+,"6","3","0","0","0","0","0","0","0","0","0","Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2",
+,"7","5","0","0","0","0","0","0","0","0","0","Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11",
+,"8","5","0","0","0","0","0","0","0","0","0","Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-12",
+,"9","5","0","0","0","0","0","0","0","0","0","Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-13",
+,"10","6","0","0","0","0","0","0","0","0","0","Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2/page-21",
+,"11","6","0","0","0","0","0","0","0","0","0","Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2/page-22",
+,"12","7","0","0","0","0","0","0","0","0","0","Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11/subpage-111",
+,"13","4","1","1","5","0","0","0","0","0","0","Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1",
+,"14","4","0","0","0","0","0","0","0","0","0","Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-2",
+,"15","4","0","0","0","0","0","0","0","0","0","Subpage 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-3",
+,"16","14","0","0","0","0","0","0","0","0","0","Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-21",
+,"17","14","0","0","0","0","0","0","0","0","0","Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-22",
+,"18","13","0","0","0","0","0","0","0","0","0","Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11",
+,"19","13","0","0","0","0","0","0","0","0","0","Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-12",
+,"20","13","0","0","0","0","0","0","0","0","0","Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-13",
+,"21","18","0","0","0","0","0","0","0","0","0","Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/page-11/subpage-111",
+,"22","2","0","0","0","0","0","0","0","0","0","Page 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-1",
+,"23","2","0","0","0","0","0","0","0","0","0","Page 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-2",
+,"24","2","0","0","0","0","0","0","0","0","0","Page 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-3",
+,"25","22","0","0","0","0","0","0","0","0","0","Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-1/page-11",
+,"26","22","0","0","0","0","0","0","0","0","0","Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/page-1/page-12",
+,"27","1","0","0","0","0","0","1","2","2","0","[Translate to German:] independent page","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"28","2","0","0","0","0","0","1","22","22","0","[Translate to German:] Page 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-1",
+,"29","22","0","0","0","0","0","1","25","25","0","[Translate to German:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-1/translate-to-german-page-11",
+,"30","22","0","0","0","0","0","1","26","26","0","[Translate to German:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-1/translate-to-german-page-12",
+,"31","2","0","0","0","0","0","1","23","23","0","[Translate to German:] Page 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-2",
+,"32","2","0","0","0","0","0","1","24","24","0","[Translate to German:] Page 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-page-3",
+,"33","1","0","0","0","0","0","1","3","3","0","[Translate to German:] Company Page A","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"34","1","0","0","0","0","0","2","3","3","0","[Translate to Norwegian:] Company Page A","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"35","3","0","0","0","0","0","1","5","5","0","[Translate to German:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1",
+,"36","3","0","0","0","0","0","2","5","5","0","[Translate to Norwegian:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1",
+,"37","5","0","0","0","0","0","1","7","7","0","[Translate to German:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-11",
+,"38","5","0","0","0","0","0","2","7","7","0","[Translate to Norwegian:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-11",
+,"39","7","0","0","0","0","0","1","12","12","0","[Translate to German:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-11/translate-to-german-subpage-111",
+,"40","5","0","0","0","0","0","1","8","8","0","[Translate to German:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-12",
+,"41","5","0","0","0","0","0","2","8","8","0","[Translate to Norwegian:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-12",
+,"42","7","0","0","0","0","0","2","12","12","0","[Translate to Norwegian:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-11/translate-to-norwegian-subpage-111",
+,"43","5","0","0","0","0","0","1","9","9","0","[Translate to German:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-1/translate-to-german-page-13",
+,"44","5","0","0","0","0","0","2","9","9","0","[Translate to Norwegian:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-1/translate-to-norwegian-page-13",
+,"45","3","0","0","0","0","0","1","6","6","0","[Translate to German:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-2",
+,"46","3","0","0","0","0","0","2","6","6","0","[Translate to Norwegian:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-2",
+,"47","6","0","0","0","0","0","1","10","10","0","[Translate to German:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-2/translate-to-german-page-21",
+,"48","6","0","0","0","0","0","2","10","10","0","[Translate to Norwegian:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-2/translate-to-norwegian-page-21",
+,"49","6","0","0","0","0","0","1","11","11","0","[Translate to German:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-german-subpage-2/translate-to-german-page-22",
+,"50","6","0","0","0","0","0","2","11","11","0","[Translate to Norwegian:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-norwegian-subpage-2/translate-to-norwegian-page-22",
+,"51","1","0","0","0","0","0","3","4","4","0","[Translate to Bulgarian:] Company Page B","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"52","1","0","0","0","0","0","4","4","4","0","[Translate to Hungarian:] Company Page B","1","1",,"0","0",,,"0",NULL,NULL,"0","/",
+,"53","13","0","0","0","0","0","3","18","18","0","[Translate to Bulgarian:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-bulgarian-page-11",
+,"54","13","0","0","0","0","0","4","18","18","0","[Translate to Hungarian:] Page 1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-hungarian-page-11",
+,"55","4","0","0","0","0","0","3","13","13","0","[Translate to Bulgarian:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-1",
+,"56","4","0","0","0","0","0","4","13","13","0","[Translate to Hungarian:] Subpage 1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-1",
+,"57","18","0","0","0","0","0","3","21","21","0","[Translate to Bulgarian:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-bulgarian-page-11/translate-to-bulgarian-subpage-111",
+,"58","18","0","0","0","0","0","4","21","21","0","[Translate to Hungarian:] Subpage 1.1.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/subpage-1/translate-to-hungarian-page-11/translate-to-hungarian-subpage-111",
+,"59","13","0","0","0","0","0","3","19","19","0","[Translate to Bulgarian:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-1/translate-to-bulgarian-page-12",
+,"60","13","0","0","0","0","0","4","19","19","0","[Translate to Hungarian:] Page 1.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-1/translate-to-hungarian-page-12",
+,"61","13","0","0","0","0","0","3","20","20","0","[Translate to Bulgarian:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-1/translate-to-bulgarian-page-13",
+,"62","13","0","0","0","0","0","4","20","20","0","[Translate to Hungarian:] Page 1.3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-1/translate-to-hungarian-page-13",
+,"63","4","0","0","0","0","0","3","14","14","0","[Translate to Bulgarian:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-2",
+,"64","4","0","0","0","0","0","4","14","14","0","[Translate to Hungarian:] Subpage 2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-2",
+,"65","14","0","0","0","0","0","3","16","16","0","[Translate to Bulgarian:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-2/translate-to-bulgarian-page-21",
+,"66","14","0","0","0","0","0","4","16","16","0","[Translate to Hungarian:] Page 2.1","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-2/translate-to-hungarian-page-21",
+,"67","14","0","0","0","0","0","3","17","17","0","[Translate to Bulgarian:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-2/translate-to-bulgarian-page-22",
+,"68","14","0","0","0","0","0","4","17","17","0","[Translate to Hungarian:] Page 2.2","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-2/translate-to-hungarian-page-22",
+,"69","4","0","0","0","0","0","3","15","15","0","[Translate to Bulgarian:] Subpage 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-bulgarian-subpage-3",
+,"70","4","0","0","0","0","0","4","15","15","0","[Translate to Hungarian:] Subpage 3","1","0",,"0","0",,,"0",NULL,NULL,"0","/translate-to-hungarian-subpage-3",
 "tt_content"
 ,"uid","rowDescription","pid","tstamp","crdate","deleted","hidden","starttime","endtime","fe_group","sorting","editlock","sys_language_uid","l18n_parent","l10n_source","l10n_state","t3_origuid","l18n_diffsource","t3ver_oid","t3ver_wsid","t3ver_state","t3ver_stage","CType","header","header_position","bodytext","bullets_type","uploads_description","uploads_type","assets","image","imagewidth","imageorient","imagecols","imageborder","media","layout","frame_class","cols","space_before_class","space_after_class","records","pages","colPos","subheader","header_link","image_zoom","header_layout","list_type","sectionIndex","linkToTop","file_collections","filelink_size","filelink_sorting","filelink_sorting_direction","target","recursive","imageheight","pi_flexform","accessibility_title","accessibility_bypass","accessibility_bypass_text","category_field","table_class","table_caption","table_delimiter","table_enclosure","table_header_position","table_tfoot","categories","selected_categories","date"
 ,"1",,"3","1750759527","1750756697","0","0","0","0",,"256","0","0","0","0",NULL,"0","{""CType"":"""",""colPos"":"""",""header"":"""",""header_layout"":"""",""header_position"":"""",""date"":"""",""header_link"":"""",""subheader"":"""",""bodytext"":"""",""assets"":"""",""imagewidth"":"""",""imageheight"":"""",""imageborder"":"""",""imageorient"":"""",""imagecols"":"""",""image_zoom"":"""",""layout"":"""",""frame_class"":"""",""space_before_class"":"""",""space_after_class"":"""",""sectionIndex"":"""",""linkToTop"":"""",""sys_language_uid"":"""",""hidden"":"""",""starttime"":"""",""endtime"":"""",""fe_group"":"""",""editlock"":"""",""categories"":"""",""rowDescription"":""""}","0","0","0","0","textmedia","Company Page A",,"<p>we see here the main page of Company A</p>","0","0","0","1","0","0","17","2","0","0","0","default","0",,,NULL,NULL,"0",,,"0","0",,"1","0",NULL,"0",,,,"0","0",NULL,,"0",,,,NULL,"124","0","0","0","0",NULL,"0"
@@ -110,11 +110,3 @@
 ,"4","3","1","0"
 ,"5","13","1","0"
 ,"13","5","1","0"
-,"33","4","1","0"
-,"34","4","1","0"
-,"35","13","1","0"
-,"36","13","1","0"
-,"51","3","1","0"
-,"52","3","1","0"
-,"55","5","1","0"
-,"56","5","1","0"

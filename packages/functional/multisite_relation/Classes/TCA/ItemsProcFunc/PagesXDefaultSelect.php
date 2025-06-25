@@ -16,15 +16,17 @@
 namespace AbSoftlab\MultisiteRelation\TCA\ItemsProcFunc;
 
 use TYPO3\CMS\Core\Database\RelationHandler;
+use TYPO3\CMS\Core\Localization\LanguageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class PagesXDefaultSelect
 {
     public function selectedRelationPages(&$params): void
     {
-        $items = [];
+
+        $items =  $params['items'];
         $items[] = [
-            'label' => '[' . $params['row']['uid'] . '] ' . $params['row']['title'] . ' (current page)',
+            'label' => '[' . $params['row']['uid'] . '] ' . $params['row']['title'] . ' ('.$this->getLanguageService()->sL('LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:current_page').')',
             'value' => $params['row']['uid'],
         ];
         $selectedRelations = is_array($params['row']['multisite_relations']) ? $params['row']['multisite_relations'] : [];
@@ -40,6 +42,11 @@ class PagesXDefaultSelect
             ];
         }
         $params['items'] = $items;
+    }
+
+    protected function getLanguageService(): LanguageService
+    {
+        return $GLOBALS['LANG'];
     }
 
 }

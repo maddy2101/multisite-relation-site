@@ -8,7 +8,7 @@ $tca = [
             'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_enable.label',
             'description' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_enable.description',
             'onChange' => 'reload',
-            'l10n_mode' => 'exclude',
+            'displayCond' => 'FIELD:sys_language_uid:=:0',
             'config' => [
                 'type' => 'check',
                 'renderType' => 'checkboxToggle',
@@ -22,8 +22,12 @@ $tca = [
         'multisite_relations' => [
             'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations.label',
             'description' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations.description',
-            'displayCond' => 'FIELD:multisite_relations_enable:REQ:true',
-            'l10n_mode' => 'exclude',
+            'displayCond' => [
+                'AND' => [
+                    'FIELD:sys_language_uid:=:0',
+                    'FIELD:multisite_relations_enable:REQ:true',
+                ],
+            ],
             'config' => [
                 'type' => 'group',
                 'allowed' => 'pages',
@@ -31,7 +35,7 @@ $tca = [
                 'suggestOptions' => [
                     'default' => [
                         'additionalSearchFields' => 'nav_title, url',
-                        'addWhere' => 'AND (pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT . ' OR pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_SHORTCUT . ')',
+                        'addWhere' => 'AND pages.sys_language_uid = 0 AND (pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_DEFAULT . ' OR pages.doktype = ' . \TYPO3\CMS\Core\Domain\Repository\PageRepository::DOKTYPE_SHORTCUT . ')',
                     ],
                 ],
             ],
@@ -39,15 +43,19 @@ $tca = [
         'multisite_relations_xdefault' => [
             'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_xdefault.label',
             'description' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:multisite_relations_xdefault.description',
-            'displayCond' => 'FIELD:multisite_relations_enable:REQ:true',
-            'l10n_mode' => 'exclude',
+            'displayCond' => [
+                'AND' => [
+                    'FIELD:sys_language_uid:=:0',
+                    'FIELD:multisite_relations_enable:REQ:true',
+                ],
+            ],
             'config' => [
                 'type' => 'radio',
-                // items will be provided by itemsProcFunc, but some validation insists on it being present -.-
+                // don't remove. It is needed for resetting the value to 0 if relation is released
                 'items' => [
                     [
-                        'label' => 'foo',
-                        'value' => 'bar',
+                        'label' => 'LLL:EXT:multisite_relation/Resources/Private/Language/locallang_be.xlf:not_set',
+                        'value' => 0,
                     ],
                 ],
                 'itemsProcFunc' => \AbSoftlab\MultisiteRelation\TCA\ItemsProcFunc\PagesXDefaultSelect::class . '->selectedRelationPages',

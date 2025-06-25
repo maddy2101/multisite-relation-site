@@ -15,6 +15,7 @@
 
 namespace AbSoftlab\MultisiteRelation\EventListener;
 
+use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Context\LanguageAspect;
 use TYPO3\CMS\Core\Database\RelationHandler;
@@ -37,18 +38,23 @@ class HrefLangTagsListener
         $hreflangs = [];
         /** @var PageArguments $routing */
         $routing = $event->getRequest()->getAttribute('routing');
-        /** @var SiteLanguage $language */
-        $language = $event->getRequest()->getAttribute('language');
         $pageId = $routing->getPageId();
-        $languageId = $language->getLanguageId();
-        $pageRepository = $this->buildPageRepository(new LanguageAspect($languageId));
-        $pageRecord = $pageRepository->getPage($pageId);
+        $pageRecord = BackendUtility::getRecord('pages',$pageId);
         if ($pageRecord['multisite_relations_enable'] !== 1) {
             return;
         }
         if ($pageRecord['multisite_relations'] > 0) {
-            $this->relationHandler->start('', 'pages', 'tx_multisite_relation_page_page_mm', $pageId, 'pages');
-            $selectedRelations = $this->relationHandler->getFromDB() ? $this->relationHandler->getFromDB()['pages'] : [];
+            $fieldConfig = $GLOBALS['TCA']['pages']['columns']['multisite_relations'];
+            $relationHandler = GeneralUtility::makeInstance(RelationHandler::class);
+            $relationHandler->start(
+                'multisite_relations',
+                $fieldConfig['config']['allowed'] ?? '',
+                $fieldConfig['config']['MM'] ?? '',
+                $pageId,
+                'pages',
+                $fieldConfig['config'] ?? []
+            );
+            $selectedRelations = $relationHandler->getFromDB()['pages'] ?? [];
             if (!empty($selectedRelations)) {
                 foreach ($selectedRelations as $selectedRelation) {
                     $site = $this->siteFinder->getSiteByPageId($selectedRelation['uid']);

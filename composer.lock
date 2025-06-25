@@ -12,10 +12,11 @@
             "dist": {
                 "type": "path",
                 "url": "packages/functional/multisite_relation",
-                "reference": "6a5fdcef2f2c75df30f49a9947968414ade17e75"
+                "reference": "8ad7b6cfc907a2d93e167028f7c84abdd9e1ad67"
             },
             "require": {
                 "typo3/cms-core": "^12.4",
+                "typo3/cms-fluid-styled-content": "^12.4",
                 "typo3/cms-seo": "^12.4"
             },
             "require-dev": {

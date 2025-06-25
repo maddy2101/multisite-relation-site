@@ -16,10 +16,11 @@
 namespace AbSoftlab\MultisiteRelation\Tests\Functional\Hreflang;
 
 use AbSoftlab\MultisiteRelation\Tests\Functional\AbstractTest;
+use AbSoftlab\MultisiteRelation\Tests\Functional\AbstractTestCase;
 use PHPUnit\Framework\Attributes\Test;
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
-class ActionTest extends AbstractTest
+class ActionTest extends AbstractTestCase
 {
     public function setUp(): void
     {
@@ -79,6 +80,31 @@ class ActionTest extends AbstractTest
         }
     }
     #[Test]
+    public function companyArelatesToCompanyBSubSiteFromCompanyB()
+    {
+        $response = $this->executeFrontendSubRequest(new InternalRequest('https://www.company-b.com/subpage-1'));
+        self::assertSame(200, $response->getStatusCode());
+        $stream = $response->getBody();
+        $stream->rewind();
+        $content = $stream->getContents();
+        self::assertStringContainsString('Subpage 1', $content);
+
+        $expectedHreflangTags = [
+            '<link rel="canonical" href="https://www.company-b.com/subpage-1"/>',
+            '<link rel="alternate" hreflang="en-GB" href="https://www.company-b.com/subpage-1"/>',
+            '<link rel="alternate" hreflang="bg-BG" href="https://www.company-b.com/bg/translate-to-bulgarian-subpage-1"/>',
+            '<link rel="alternate" hreflang="hu-HU" href="https://www.company-b.com/hu/translate-to-hungarian-subpage-1"/>',
+            '<link rel="alternate" hreflang="en-US" href="https://www.company-a.com/subpage-1"/>',
+            '<link rel="alternate" hreflang="de-DE" href="https://www.company-a.com/de-de/translate-to-german-subpage-1"/>',
+            '<link rel="alternate" hreflang="no-NO" href="https://www.company-a.com/no/translate-to-norwegian-subpage-1"/>',
+            '<link rel="alternate" hreflang="x-default" href="https://www.company-a.com/subpage-1"/>',
+        ];
+
+        foreach ($expectedHreflangTags as $expectedTag) {
+            self::assertStringContainsString($expectedTag, $content);
+        }
+    }
+    #[Test]
     public function companyArelatesToCompanyBSubSiteFromCompanyATranslation()
     {
         $response = $this->executeFrontendSubRequest(new InternalRequest('https://www.company-a.com/no/translate-to-norwegian-subpage-1/'));
@@ -90,6 +116,31 @@ class ActionTest extends AbstractTest
 
         $expectedHreflangTags = [
             '<link rel="canonical" href="https://www.company-a.com/no/translate-to-norwegian-subpage-1"/>',
+            '<link rel="alternate" hreflang="en-GB" href="https://www.company-b.com/subpage-1"/>',
+            '<link rel="alternate" hreflang="bg-BG" href="https://www.company-b.com/bg/translate-to-bulgarian-subpage-1"/>',
+            '<link rel="alternate" hreflang="hu-HU" href="https://www.company-b.com/hu/translate-to-hungarian-subpage-1"/>',
+            '<link rel="alternate" hreflang="en-US" href="https://www.company-a.com/subpage-1"/>',
+            '<link rel="alternate" hreflang="de-DE" href="https://www.company-a.com/de-de/translate-to-german-subpage-1"/>',
+            '<link rel="alternate" hreflang="no-NO" href="https://www.company-a.com/no/translate-to-norwegian-subpage-1"/>',
+            '<link rel="alternate" hreflang="x-default" href="https://www.company-a.com/subpage-1"/>',
+        ];
+
+        foreach ($expectedHreflangTags as $expectedTag) {
+            self::assertStringContainsString($expectedTag, $content);
+        }
+    }
+    #[Test]
+    public function companyArelatesToCompanyBSubSiteFromCompanyBTranslation()
+    {
+        $response = $this->executeFrontendSubRequest(new InternalRequest('https://www.company-b.com/bg/translate-to-bulgarian-subpage-1/'));
+        self::assertSame(200, $response->getStatusCode());
+        $stream = $response->getBody();
+        $stream->rewind();
+        $content = $stream->getContents();
+        self::assertStringContainsString('<title>[Translate to Bulgarian:] Subpage 1</title>', $content);
+
+        $expectedHreflangTags = [
+            '<link rel="canonical" href="https://www.company-b.com/bg/translate-to-bulgarian-subpage-1"/>',
             '<link rel="alternate" hreflang="en-GB" href="https://www.company-b.com/subpage-1"/>',
             '<link rel="alternate" hreflang="bg-BG" href="https://www.company-b.com/bg/translate-to-bulgarian-subpage-1"/>',
             '<link rel="alternate" hreflang="hu-HU" href="https://www.company-b.com/hu/translate-to-hungarian-subpage-1"/>',

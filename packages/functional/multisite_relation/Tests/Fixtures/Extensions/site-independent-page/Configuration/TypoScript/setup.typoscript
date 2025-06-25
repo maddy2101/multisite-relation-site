@@ -35,5 +35,12 @@ page {
         layoutRootPaths {
             0 = EXT:site-independent-page/Resources/Private/Layouts/Page/
         }
+
+        dataProcessing {
+            10 = language-menu
+            10 {
+                as = languageNavigation
+            }
+        }
     }
 }

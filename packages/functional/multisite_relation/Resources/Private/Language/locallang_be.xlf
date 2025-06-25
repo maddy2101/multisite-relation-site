@@ -30,6 +30,12 @@
                 <source><![CDATA[Define which of the sites receives xdefault setting.
 Don't forget to save the record when changing selected pages of the selection (above) to see the full option list here.]]></source>
             </trans-unit>
+            <trans-unit id="not_set">
+                <source>not set (not recommended)</source>
+            </trans-unit>
+            <trans-unit id="current_page">
+                <source>current page</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
