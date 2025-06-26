@@ -38,7 +38,8 @@ class MultisiteLanguageMenuProcessor implements DataProcessorInterface
         $pages = $this->relatedPagesService->getLocalTranslations($pageRecord);
         $pages = array_merge($pages, $this->relatedPagesService->getRelatedPages($pageRecord));
         foreach ($pages as $index => $page) {
-            if ($page['language'] === $language) {
+            $pageLanguage = $this->siteFinder->getSiteByPageId($page['uid'])->getLanguageById($page['language']['languageId']);
+            if ($pageLanguage === $language) {
                 $pages[$index]['isActiveLanguage'] = true;
             } else {
                 $pages[$index]['isActiveLanguage'] = false;

@@ -50,7 +50,10 @@ class RelatedPagesService
                     foreach ($site->getLanguages() as $language) {
                         $pageRepository = $this->buildPageRepository(new LanguageAspect($language->getLanguageId()));
                         $page = $pageRepository->getPage($selectedRelation['uid']);
-                        $page['language'] = $language;
+                        if (empty($page)) {
+                            continue;
+                        }
+                        $page['language'] = $language->toArray();
                         // if translation is not available (e.g. hidden), the original record is returned.
                         // skip further processing then
                         if ($language->getLanguageId() > 0 && !isset($page['_PAGES_OVERLAY'])) {
@@ -72,7 +75,7 @@ class RelatedPagesService
         foreach ($site->getLanguages() as $language) {
             $pageRepository = $this->buildPageRepository(new LanguageAspect($language->getLanguageId()));
             $page = $pageRepository->getPage($pageRecord['uid']);
-            $page['language'] = $language;
+            $page['language'] = $language->toArray();
             // if translation is not available (e.g. hidden), the original record is returned.
             // skip further processing then
             if ($language->getLanguageId() > 0 && !isset($page['_PAGES_OVERLAY'])) {

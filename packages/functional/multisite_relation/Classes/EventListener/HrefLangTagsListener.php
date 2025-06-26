@@ -15,8 +15,10 @@
 
 namespace AbSoftlab\MultisiteRelation\EventListener;
 
+use AbSoftlab\MultisiteRelation\Event\ModifyHreflangMultisiteTagsEvent;
 use AbSoftlab\MultisiteRelation\Service\RelatedPagesService;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
+use TYPO3\CMS\Core\EventDispatcher\EventDispatcher;
 use TYPO3\CMS\Core\Routing\PageArguments;
 use TYPO3\CMS\Core\Site\SiteFinder;
 use TYPO3\CMS\Frontend\Event\ModifyHrefLangTagsEvent;
@@ -25,7 +27,8 @@ class HrefLangTagsListener
 {
     public function __construct(
         private readonly SiteFinder $siteFinder,
-        private readonly RelatedPagesService $relatedPagesService
+        private readonly RelatedPagesService $relatedPagesService,
+        private readonly EventDispatcher $eventDispatcher
     ) {}
 
     public function __invoke(ModifyHrefLangTagsEvent $event): void
@@ -38,7 +41,7 @@ class HrefLangTagsListener
         $pages = $this->relatedPagesService->getRelatedPages($pageRecord);
         foreach ($pages as $page) {
             $site = $this->siteFinder->getSiteByPageId($page['uid']);
-            $language = $page['language'];
+            $language = $site->getLanguageById($page['language']['languageId']);
             $uri = $site->getRouter()->generateUri($page['uid'], ['_language' => $language]);
             $hreflangs[(string)$language->getLocale()] = (string)$uri;
         }
@@ -51,6 +54,11 @@ class HrefLangTagsListener
             $uri = $site->getRouter()->generateUri($pageId, ['_language' => $language]);
             $hreflangs['x-default'] = (string)$uri;
         }
+
+        $hreflangs = $this->eventDispatcher->dispatch(
+            new ModifyHreflangMultisiteTagsEvent($hreflangs, $language, $site)
+        )->getHrefLangs();
+
 
         $event->setHrefLangs($hreflangs);
     }
