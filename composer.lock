@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/functional/multisite_relation",
-                "reference": "8ad7b6cfc907a2d93e167028f7c84abdd9e1ad67"
+                "reference": "f06b01f95052045e5cd2d4ebacd6f39c02499e87"
             },
             "require": {
                 "typo3/cms-core": "^12.4",
@@ -64,9 +64,10 @@
             "dist": {
                 "type": "path",
                 "url": "packages/sites/site-company-a",
-                "reference": "bda573e95b1b86650b08be5bd1a6703c52308e40"
+                "reference": "a6a59e17fe059ed494115a0d1d152d2002e8c5f7"
             },
             "require": {
+                "ab-softlab/multisite-relation": "dev-main",
                 "b13/bolt": "^2.3",
                 "typo3/cms-core": "^12.4"
             },
