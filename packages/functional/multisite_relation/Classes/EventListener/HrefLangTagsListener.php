@@ -38,6 +38,9 @@ class HrefLangTagsListener
         $routing = $event->getRequest()->getAttribute('routing');
         $pageId = $routing->getPageId();
         $pageRecord = BackendUtility::getRecord('pages', $pageId);
+        if ($pageRecord['multisite_relations_enable'] === 0) {
+            return;
+        }
         $pages = $this->relatedPagesService->getRelatedPages($pageRecord);
         foreach ($pages as $page) {
             $site = $this->siteFinder->getSiteByPageId($page['uid']);

@@ -24,7 +24,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class RelatedPagesService
 {
-    public function __construct(private readonly SiteFinder $siteFinder) {}
+    public function __construct(private readonly SiteFinder $siteFinder, private readonly RelationHandler $relationHandler) {}
 
     public function getRelatedPages(array $pageRecord): array
     {
@@ -32,10 +32,10 @@ class RelatedPagesService
             return [];
         }
         $pages = [];
-        if ($pageRecord['multisite_relations'] > 0) {
+
+
             $fieldConfig = $GLOBALS['TCA']['pages']['columns']['multisite_relations'];
-            $relationHandler = GeneralUtility::makeInstance(RelationHandler::class);
-            $relationHandler->start(
+            $this->relationHandler->start(
                 'multisite_relations',
                 $fieldConfig['config']['allowed'] ?? '',
                 $fieldConfig['config']['MM'] ?? '',
@@ -43,7 +43,7 @@ class RelatedPagesService
                 'pages',
                 $fieldConfig['config'] ?? []
             );
-            $selectedRelations = $relationHandler->getFromDB()['pages'] ?? [];
+            $selectedRelations = $this->relationHandler->getFromDB()['pages'] ?? [];
             if (!empty($selectedRelations)) {
                 foreach ($selectedRelations as $selectedRelation) {
                     $site = $this->siteFinder->getSiteByPageId($selectedRelation['uid']);
@@ -64,7 +64,7 @@ class RelatedPagesService
 
                 }
             }
-        }
+
         return $pages;
     }
 
