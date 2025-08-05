@@ -42,6 +42,9 @@ class HrefLangTagsListener
             return;
         }
         $pages = $this->relatedPagesService->getRelatedPages($pageRecord);
+        if ($pages === []) {
+            return;
+        }
         foreach ($pages as $page) {
             $site = $this->siteFinder->getSiteByPageId($page['uid']);
             $language = $site->getLanguageById($page['language']['languageId']);
