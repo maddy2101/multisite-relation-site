@@ -1,2 +1,0 @@
-@import 'EXT:site-independent-page/Configuration/PageTs/Mod/WebLayout/BackendLayouts/*.tsconfig'
-@import 'EXT:site-independent-page/Configuration/PageTs/TCEMAIN.tsconfig'

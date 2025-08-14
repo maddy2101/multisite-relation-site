@@ -1,4 +1,0 @@
-TCEMAIN {
-    permissions.groupid = 4
-    permissions.group = show, editcontent, edit, delete, new
-}

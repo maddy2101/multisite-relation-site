@@ -2,6 +2,7 @@
 public
 var
 vendor
+packages/functional/multisite-relation/
 
 .cache
 .php-cs-fixer.cache

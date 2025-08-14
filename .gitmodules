@@ -1,0 +1,3 @@
+[submodule "packages/functional/multisite-relation"]
+	path = packages/functional/multisite-relation
+	url = git@github.com:maddy2101/multisite-relation.git
